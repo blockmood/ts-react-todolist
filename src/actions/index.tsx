@@ -18,7 +18,6 @@ export interface changeDone {
 
 export type TodoAction = addTodo | deleteTodo | changeDone
 
-//添加item
 export const addTodo = (value:string):addTodo => ({
     type:contants.ADD_TODO,
     value
