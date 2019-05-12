@@ -18,9 +18,9 @@ class TodoApp extends React.Component<ITodoApp,object>{
         value:''
     }
 
-    handleSubmit = (e:React.FormEvent) => {
+    handleSubmit = (event:React.FormEvent) => {
         const {value} = this.state
-        e.preventDefault()
+        event.preventDefault()
         if(!value.trim()){
             alert('请输入内容')
             return
