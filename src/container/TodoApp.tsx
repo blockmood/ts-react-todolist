@@ -13,7 +13,11 @@ interface ITodoApp {
     list:Array<{id:number,text:string,done:boolean}>
 }
 
-class TodoApp extends React.Component<ITodoApp,object>{
+interface IState {
+    value:string
+}
+
+class TodoApp extends React.Component<ITodoApp,IState>{
     state = {
         value:''
     }
