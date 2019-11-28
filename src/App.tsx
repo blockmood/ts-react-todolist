@@ -1,14 +1,10 @@
-import * as React from 'react';
-import TodoApp from './container/TodoApp'
+import * as React from 'react'
+import Index from './container/index'
 
-class App extends React.Component {
-  public render() {
-    return (
-      <div className="App">
-          <TodoApp />
-      </div>
-    );
-  }
-}
+const App: React.FC = () => (
+  <div>
+    <Index />
+  </div>
+)
 
-export default App;
+export default App

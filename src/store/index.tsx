@@ -1,15 +1,13 @@
-import {createStore,compose,applyMiddleware} from 'redux';
-import TodoReducer from '../reducer/todoReducer'
-import reduxlogger from 'redux-logger'
+import { createStore, compose, applyMiddleware } from 'redux'
+import TodoReducer from '../reducer/TodoReducer'
+import logger from 'redux-logger'
 
-const initalState = {
-    list:[]
+const middleware = [logger]
+
+const initState = {
+  list: []
 }
 
-const middleware = [reduxlogger]
+const storeEnhangeres = compose(applyMiddleware(...middleware))
 
-const storeEnhancers = compose(
-    applyMiddleware(...middleware)
-)
-
-export const store = createStore(TodoReducer,initalState,storeEnhancers)
+export default createStore(TodoReducer, initState, storeEnhangeres)
