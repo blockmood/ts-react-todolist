@@ -3,7 +3,7 @@ import TodoReducer from '../reducer/TodoReducer'
 import logger from 'redux-logger'
 
 const middleware = [logger]
-
+ 
 const initState = {
   list: []
 }
